@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StrabismusAI — Hub (Textbook + Clinical Tools)</title>
+<style>
+  :root{--bar-h:56px}
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:#f3f4f6}
+  .bar{position:sticky;top:0;z-index:10;height:var(--bar-h);background:#111827;color:#fff;display:flex;align-items:center;gap:.5rem;padding:0 .75rem}
+  .tab{border:0;background:#1f2937;color:#e5e7eb;padding:.45rem .8rem;border-radius:10px;font-weight:700;cursor:pointer}
+  .tab[aria-selected="true"]{background:#3b82f6;color:#fff}
+  .wrap{height:calc(100vh - var(--bar-h))}
+  iframe{display:none;width:100%;height:100%;border:0;background:#fff}
+  iframe.active{display:block}
+</style>
+</head>
+<body>
+  <nav class="bar" role="tablist" aria-label="StrabismusAI Views">
+    <button class="tab" role="tab" aria-selected="true"  aria-controls="view-textbook" id="tab-textbook">Textbook</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="view-tools"    id="tab-tools">Clinical Tools</button>
+    <span style="margin-left:auto;opacity:.8;font-size:.9rem">Iframe isolation → 100% original styles</span>
+  </nav>
+
+  <div class="wrap">
+    <iframe id="view-textbook" title="Textbook" class="active"
+            src="textbook.html"
+            sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+
+    <iframe id="view-tools" title="Clinical Tools"
+            src="tools.html"
+            sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+  </div>
+
+<script>
+  const tabs=[...document.querySelectorAll('.tab')];
+  const frames={textbook:document.getElementById('view-textbook'),
+                tools:document.getElementById('view-tools')};
+  function select(which){
+    for(const t of tabs) t.setAttribute('aria-selected', String(t.id==='tab-'+which));
+    for(const id of Object.keys(frames)) frames[id].classList.toggle('active', id===which);
+    history.replaceState(null,'','#'+which);
+  }
+  tabs.forEach(btn=>btn.addEventListener('click',()=>select(btn.id.split('-')[1])));
+  const hash=location.hash.replace('#','');
+  if(hash==='tools'||hash==='textbook') select(hash);
+</script>
+</body>
+</html>
