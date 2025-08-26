@@ -1,0 +1,1372 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Strabismus AI — Stellar Skin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="assets/css/sai-stellar-bridge.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper follows Stellar's structure -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <span class="logo"><img src="images/logo.svg" alt="" /></span>
+        <h1>Strabismus AI</h1>
+        <p>Wrapped in <strong>Stellar</strong> by HTML5 UP</p>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html#intro">Home</a></li>
+          <li><a href="#tool-stellar" class="active">Tool</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <section id="tool-stellar" class="main special">
+          <header class="major"><h2>Tool</h2></header>
+
+          <!-- ==== BEGIN: injected tool content ==== -->
+        <article id="tool" class="active">
+<a href="#results" class="skip-link">Skip to results</a>
+
+<div class="neu-container">
+  <header class="header neu-card" role="banner">
+    <!-- New muted hero -->
+    <div class="hero-v3" role="group" aria-label="App branding">
+      <h1 class="wordmark" aria-label="Strabismus AI">
+        <span class="top">Strabismus</span> <span class="bottom">AI</span><span class="dot" aria-hidden="true">.</span>
+      </h1>
+      <div class="wordmark-underline" aria-hidden="true"></div>
+
+      <p class="thanks-card" role="note">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="5.5" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M9 14l-3.2 6 4.2-2 2 2 2-2 4.2 2L15 14" stroke="var(--accent-2)" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <span class="label">Special&nbsp;Thanks</span>
+        <span class="names"><strong>Dr. Eman Abdelaal</strong> &amp; <strong>Dr. Ali Mansour</strong></span>
+        <span class="tail">for their invaluable expertise and guidance.</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Inputs -->
+  <section class="neu-card" id="tab-core" aria-labelledby="core-title">
+    <h2 id="core-title">Core Inputs</h2>
+    <div class="grid-4" style="margin-top:1rem;">
+      <label>Age (years)
+        <input id="age" type="number" class="neu-input" placeholder="e.g., 8">
+      </label>
+      <label>Onset
+        <select id="onset" class="neu-input">
+          <option value="">— select —</option>
+          <option value="infant">Infant</option>
+          <option value="child">Child</option>
+          <option value="adult">Adult</option>
+          <option value="acute">Acute</option>
+        </select>
+      </label>
+      <label>Primary deviation
+        <select id="primary" class="neu-input">
+          <option value="">— select —</option>
+          <option value="eso">Esotropia (eso)</option>
+          <option value="exo">Exotropia (exo)</option>
+          <option value="vertical">Vertical</option>
+        </select>
+      </label>
+      <label>Comitancy <span class="hint">(echo: <span id="comitOut">—</span>)</span>
+        <select id="comitancy" class="neu-input">
+          <option value="">— select —</option>
+          <option value="comitant">Comitant</option>
+          <option value="incomitant">Incomitant</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid-4" style="margin-top:1rem;">
+      <label>Distance angle (PD)
+        <input id="angleDist" type="number" class="neu-input" placeholder="e.g., 25">
+      </label>
+      <label>Near angle (PD)
+        <input id="angleNear" type="number" class="neu-input" placeholder="e.g., 35">
+      </label>
+      <label>Pattern
+        <select id="pattern" class="neu-input">
+          <option value="none">None</option>
+          <option value="A">A</option>
+          <option value="V">V</option>
+        </select>
+      </label>
+      <label>Torsion
+        <select id="torsion" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="none">None</option>
+          <option value="incyclo">Incyclo</option>
+          <option value="excyclo">Excyclo</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid-4" style="margin-top:1rem;">
+      <label>Head tilt
+        <select id="headTilt" class="neu-input">
+          <option value="none">None</option>
+          <option value="right">Right</option>
+          <option value="left">Left</option>
+        </select>
+      </label>
+      <label>Worse gaze
+        <select id="worseGaze" class="neu-input">
+          <option value="none">None</option>
+          <option value="right">Right</option>
+          <option value="left">Left</option>
+          <option value="up">Up</option>
+          <option value="down">Down</option>
+        </select>
+      </label>
+      <label>Version / duction limits
+        <select id="versionLimits" class="neu-input">
+          <option value="none">None</option>
+          <option value="so">SO underaction</option>
+          <option value="ir">IR underaction</option>
+          <option value="sr">SR underaction</option>
+          <option value="elevAll">Elevation deficit (all)</option>
+          <option value="lr">LR limitation</option>
+          <option value="soelev">Limited elevation in adduction</option>
+          <option value="mr">MR limitation</option>
+        </select>
+      </label>
+      <label style="display:flex; align-items:center; gap:.5rem;">
+        <input id="globalRestrict" type="checkbox"> Global restriction
+      </label>
+    </div>
+
+    <div class="grid-4" style="margin-top:1rem;">
+      <label>Fatigability
+        <select id="fatigue" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+      <label>Stereo
+        <select id="stereo" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+          <option value="nil">Nil</option>
+        </select>
+      </label>
+      <label>Thyroid disease
+        <select id="thyroid" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+      <label>Trauma
+        <select id="trauma" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid-4" style="margin-top:1rem;">
+      <label>Hyperopia
+        <select id="hyperopia" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="none">None</option>
+          <option value="low">Low</option>
+          <option value="med">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </label>
+      <label>High myopia
+        <select id="highMyopia" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+      <label>Craniosynostosis
+        <select id="cranio" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+      <label>Prior strabismus surgery
+        <select id="priorSx" class="neu-input">
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+    </div>
+
+    <fieldset style="margin-top:1rem;">
+      <legend>Associated signs</legend>
+      <div class="grid-4">
+        <label><input id="signPtosis" type="checkbox"> Ptosis</label>
+        <label><input id="signAniso" type="checkbox"> Anisocoria</label>
+        <label><input id="signPain" type="checkbox"> Pain with EOM</label>
+        <label><input id="signProptosis" type="checkbox"> Proptosis</label>
+      </div>
+    </fieldset>
+
+    <div style="margin-top:1.25rem;">
+      <button class="neu-button primary" onclick="analyze()">Analyze</button>
+      <button class="neu-button" onclick="clearResults()">Clear</button>
+    </div>
+  </section>
+
+  <!-- Calculators -->
+  <section class="neu-card" aria-labelledby="calc-title">
+    <h2 id="calc-title">Quick Calculators</h2>
+    <div class="grid-3" style="margin-top:1rem;">
+      <div>
+        <h3>Hirschberg</h3>
+        <label>Decentration (mm)
+          <input id="hirschbergMM" type="number" step="0.1" class="neu-input" placeholder="e.g., 1.5">
+        </label>
+        <div style="margin-top:.5rem; display:flex; gap:.5rem; align-items:center;">
+          <button id="btnHirschberg" class="neu-button">Estimate PD</button>
+          <output id="hirOut" class="neu-output" aria-live="polite"></output>
+        </div>
+      </div>
+      <div>
+        <h3>AC/A (Gradient)</h3>
+        <label>D0 (PD @ 0.00D)
+          <input id="D0" type="number" class="neu-input">
+        </label>
+        <label>D1 (PD @ +3.00D)
+          <input id="D1" type="number" class="neu-input">
+        </label>
+        <div style="margin-top:.5rem; display:flex; gap:.5rem; align-items:center;">
+          <button id="btnACA" class="neu-button">Compute</button>
+          <output id="acaOut" class="neu-output" aria-live="polite"></output>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="neu-card" aria-labelledby="resultsTitle">
+    <h2 id="resultsTitle" tabindex="-1">Results</h2>
+
+    <div id="redFlagsWrap" hidden style="margin:.75rem 0;">
+      <strong>⚠ Red flags:</strong>
+      <div id="redFlags"></div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:1rem; margin:.5rem 0;">
+      <label for="confMeter" style="min-width:120px;">Confidence</label>
+      <progress id="confMeter" max="100" value="0" style="flex:1;"></progress>
+      <span id="confLabel">0%</span>
+    </div>
+
+    <div class="neu-card" style="padding:1rem; margin:1rem 0;">
+      <div id="dx" aria-live="polite">—</div>
+      <div id="dxTags" style="margin-top:.5rem;" aria-live="polite"></div>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Top Differentials</h3>
+        <ul id="ddx" aria-live="polite"></ul>
+      </div>
+      <div>
+        <h3>Plan</h3>
+        <ul id="plan" aria-live="polite"></ul>
+      </div>
+    </div>
+
+    <div style="margin-top:1rem;">
+      <h3>Why</h3>
+      <p id="why" aria-live="polite"></p>
+      <h3>Education</h3>
+      <p id="edu" aria-live="polite"></p>
+    </div>
+
+    <div style="margin-top:1rem;">
+      <h3>References</h3>
+      <ul id="refs"></ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Built by combining the original diagnostic engine with a neumorphic UI.</p>
+  </footer>
+</div>
+
+<script>
+/* ===== Engine.js (enhanced, UI preserved) ===== */
+const qs = (sel) => document.querySelector(sel);
+const byId = (id) => document.getElementById(id);
+const val = (id) => (byId(id)?.value ?? "");
+const num = (id) => { const v = byId(id)?.value; if(v === undefined || v === "") return NaN; return Number(v); };
+const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+
+let usedHirschberg = false;
+
+// Calculators
+document.addEventListener('DOMContentLoaded', () => {
+  byId('btnHirschberg')?.addEventListener('click', ()=>{
+    const mm = num('hirschbergMM');
+    if(!Number.isFinite(mm)){ byId('hirOut').textContent = 'Enter mm decentration.'; return; }
+    const pd = mm * 15; // 1 mm ≈ 15 prism diopters
+    byId('hirOut').textContent = `~${pd.toFixed(1)} prism diopters (rough).`;
+    usedHirschberg = true;
+  });
+  byId('btnACA')?.addEventListener('click', ()=>{
+    const D0 = num('D0'); const D1 = num('D1');
+    if(!Number.isFinite(D0) || !Number.isFinite(D1)){ byId('acaOut').textContent = 'Enter PD values first.'; return; }
+    const p = 3; // +3.00 D
+    const ratio = (D0 - D1) / p;
+    const note = (ratio >= 5) ? ' (high — consider convergence excess)' : (ratio < 3 ? ' (low/normal)' : ' (normal range)');
+    byId('acaOut').textContent = `AC/A ≈ ${(ratio).toFixed(2)} PD/D${note}`;
+  });
+});
+
+/* === WOW MOBILE v2 — Core: sticky, donut, pulse, actions, drawer, auto-analyze === */
+(function(){
+  const passive = {passive:true};
+  const vibrate = (ms=20)=> (navigator.vibrate ? navigator.vibrate(ms) : void 0);
+  function toast(msg, ms=1200){
+    const t = document.createElement('div');
+    t.textContent = msg;
+    Object.assign(t.style,{
+      position:'fixed',left:'50%',bottom:'18px',transform:'translateX(-50%)',
+      background:'var(--bg)',color:'var(--text-primary)',padding:'10px 14px',
+      borderRadius:'var(--radius)',boxShadow:'8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light)',
+      fontSize:'14px',zIndex:9999,maxWidth:'90%',textAlign:'center'
+    });
+    document.body.appendChild(t);
+    setTimeout(()=>{ t.style.opacity='0'; t.style.transition='opacity .2s ease'; }, ms);
+    setTimeout(()=> t.remove(), ms+220);
+  }
+  function buildSummary(){
+  const dx   = (byId('dx')?.textContent || '—').trim();
+  const conf = (byId('confLabel')?.textContent || '').trim();
+  const why  = (byId('why')?.textContent || '').trim();
+  const plan = Array.from(document.querySelectorAll('#plan li')).map(li=>`• ${li.textContent.trim()}`).join('\n');
+  const refs = Array.from(document.querySelectorAll('#refs a')).map(a=>`- ${a.textContent} <${a.href}>`).join('\n');
+  const parts = [];
+  parts.push(`Dx: ${dx}${conf ? `  (Confidence ${conf})` : ''}`);
+  if(why)  parts.push(`Why: ${why}`);
+  if(plan) parts.push(`Plan:
+${plan}`);
+  if(refs) parts.push(`References:
+${refs}`);
+  return parts.join('\n\n');
+}
+`).join('\n');
+    const refs = Array.from(document.querySelectorAll('#refs a')).map(a=>`- ${a.textContent} <${a.href}>`).join('\n');
+    return [`Dx: ${dx}${conf?`  (Confidence ${conf})`:''}`, why && `Why: ${why}`, plan && `Plan:
+${plan}`, refs && `References:
+${refs}`].filter(Boolean).join('\n\n');
+  }
+  async function copySummary(){
+    try{
+      const text = buildSummary();
+      if(navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+      else { const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.top='-9999px'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+      vibrate(15); toast('Summary copied');
+    }catch{ toast('Copy failed'); }
+  }
+  async function shareSummary(){
+    try{
+      const text = buildSummary();
+      if(navigator.share){ await navigator.share({title:'StrabismusAI', text}); vibrate(15); toast('Shared'); }
+      else { await copySummary(); }
+    }catch{}
+  }
+  function saveSnapshot(){
+    const inputs = Array.from(document.querySelectorAll('#tab-core input,#tab-core select'))
+      .reduce((o,el)=>{ if(el.id) o[el.id]= (el.type==='checkbox')? !!el.checked : el.value; return o; },{});
+    const data = { when:new Date().toISOString(), inputs, dx:(byId('dx')?.textContent||'').trim(), conf:(byId('confLabel')?.textContent||'').trim() };
+    localStorage.setItem('sai_snapshot_v1', JSON.stringify(data));
+    vibrate(15); toast('Snapshot saved');
+  }
+  function compareSnapshot(){
+    const raw = localStorage.getItem('sai_snapshot_v1'); if(!raw){ toast('No snapshot'); return; }
+    const snap = JSON.parse(raw);
+    const now = Array.from(document.querySelectorAll('#tab-core input,#tab-core select'))
+      .reduce((o,el)=>{ if(el.id) o[el.id]= (el.type==='checkbox')? !!el.checked : el.value; return o; },{});
+    const keys=new Set([...Object.keys(snap.inputs),...Object.keys(now)]);
+    const diffs=[]; keys.forEach(k=>{ if(JSON.stringify(snap.inputs[k])!==JSON.stringify(now[k])) diffs.push(`${k}: ${JSON.stringify(snap.inputs[k])} → ${JSON.stringify(now[k])}`); });
+    alert(`Snapshot: ${snap.when}
+
+Previous Dx: ${snap.dx} (${snap.conf})
+Current Dx: ${(byId('dx')?.textContent||'').trim()} (${byId('confLabel')?.textContent||''})
+
+${diffs.length?`Changed:
+- ${diffs.join('
+- ')}`:'No input differences.'}`);
+  }
+
+  const css = `
+  @keyframes sai-pulse3 { 0%{box-shadow: inset 0 0 0 0 var(--danger);} 50%{box-shadow: inset 0 0 0 4px rgba(212,63,87,.22);} 100%{box-shadow: inset 0 0 0 0 rgba(212,63,87,0);} }
+  .sai-flag-pulse { animation: sai-pulse3 .6s ease-out 3; }
+  .sai-sticky { position:fixed; inset:0 0 auto 0; height:48px; z-index:10020; display:flex; align-items:center; gap:10px; padding:8px 12px; background:var(--bg); color:var(--text-primary); box-shadow:0 6px 14px rgba(0,0,0,.06); transform:translateY(-120%); transition:transform .25s ease; will-change:transform; }
+  .sai-sticky.show { transform:translateY(0); }
+  .sai-sticky .dx { font-weight:600; font-size:14px; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .sai-sticky .chip{ border-radius:999px; padding:6px 10px; background:var(--bg-light); box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light); font-size:12px; }
+  .sai-donut { width:28px; height:28px; }
+  `;
+  const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
+
+  const sticky = document.createElement('div');
+  sticky.className='sai-sticky';
+  sticky.innerHTML=`
+    <div class="dx">—</div>
+    <svg class="sai-donut" viewBox="0 0 36 36" aria-hidden="true">
+      <defs><linearGradient id="saiGrad" x1="0" x2="1"><stop offset="0%" stop-color="var(--accent)"/><stop offset="100%" stop-color="var(--text-primary)"/></linearGradient></defs>
+      <path d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32" stroke="var(--bg-dark)" stroke-width="4" fill="none"/>
+      <path id="saiArc" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32" stroke="url(#saiGrad)" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="100,100" stroke-dashoffset="100"/>
+    </svg>
+    <button class="chip" type="button" aria-label="Analyze">Analyze</button>`;
+  document.body.appendChild(sticky);
+  sticky.querySelector('button')?.addEventListener('click', ()=>{ if(typeof analyze==='function') analyze(); });
+
+  const header = document.querySelector('#tool .header');
+  const ro = new IntersectionObserver(es=> es.forEach(ent=> sticky.classList.toggle('show', !ent.isIntersecting)), {threshold:.1});
+  if(header) ro.observe(header);
+
+  if(!window.__sai_v2_patchAnalyze && typeof analyze==='function'){
+    window.__sai_v2_patchAnalyze = true;
+    const _analyze = analyze;
+    window.analyze = function(){
+      const r = _analyze.apply(this, arguments);
+      const rf = byId('redFlagsWrap'); if(rf && !rf.hidden){ rf.classList.remove('sai-flag-pulse'); void rf.offsetWidth; rf.classList.add('sai-flag-pulse'); }
+      const dx = (byId('dx')?.textContent||'—').trim();
+      const confTxt = (byId('confLabel')?.textContent||'0%').trim();
+      sticky.querySelector('.dx').textContent = `${dx}  •  ${confTxt}`;
+      const val = Number(byId('confMeter')?.value || 0);
+      sticky.querySelector('#saiArc')?.setAttribute('stroke-dashoffset', String(100 - Math.max(0, Math.min(100, val))));
+      return r;
+    };
+  }
+
+  let sheet = byId('sai-sheet');
+  if(!sheet){
+    sheet = document.createElement('div');
+    sheet.id='sai-sheet';
+    sheet.style.cssText='position:fixed;left:0;right:0;bottom:0;transform:translateY(110%);transition:transform .25s ease;z-index:10030;background:var(--bg);box-shadow:0 -10px 24px rgba(0,0,0,.15);border-top-left-radius:20px;border-top-right-radius:20px;padding:12px;pointer-events:none;';
+    sheet.innerHTML=`
+      <div style="width:36px;height:4px;border-radius:999px;background:var(--bg-dark);margin:6px auto 10px;"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px;">
+        <button class="neu-button">Share</button>
+        <button class="neu-button">Copy</button>
+        <button class="neu-button">Save</button>
+        <button class="neu-button">Compare</button>
+        <button class="neu-button" style="grid-column:1/-1;">Evidence Filter</button>
+        <button class="neu-button" style="grid-column:1/-1;">Close</button>
+      </div>`;
+    document.body.appendChild(sheet);
+  }
+  let sheetScrim = byId('sai-sheet-scrim');
+  if(!sheetScrim){
+    sheetScrim = document.createElement('div');
+    sheetScrim.id='sai-sheet-scrim';
+    Object.assign(sheetScrim.style,{position:'fixed',inset:'0',background:'rgba(0,0,0,.2)',opacity:'0',pointerEvents:'none',transition:'opacity .2s ease',zIndex:9998});
+    document.body.appendChild(sheetScrim);
+  }
+  function openSheet(){ sheet.style.transform='translateY(0)'; sheet.style.pointerEvents='auto'; sheetScrim.style.opacity='1'; sheetScrim.style.pointerEvents='auto'; document.body.style.touchAction='none'; document.body.style.overscrollBehavior='contain'; }
+  function closeSheet(){ sheet.style.transform='translateY(110%)'; sheet.style.pointerEvents='none'; sheetScrim.style.opacity='0'; sheetScrim.style.pointerEvents='none'; document.body.style.touchAction=''; document.body.style.overscrollBehavior=''; }
+  sheetScrim.addEventListener('click', closeSheet);
+  (()=>{ const [shareBtn, copyBtn, saveBtn, cmpBtn, filtBtn, closeBtn] = sheet.querySelectorAll('button'); 
+    shareBtn.onclick=shareSummary; copyBtn.onclick=copySummary; saveBtn.onclick=saveSnapshot; cmpBtn.onclick=compareSnapshot;
+    filtBtn.onclick=()=>{ window.__saiEvidenceFilterOn=!window.__saiEvidenceFilterOn; /* auto-analyze removed */ toast(window.__saiEvidenceFilterOn?'Evidence: Filter ON':'Evidence: Filter OFF'); };
+    closeBtn.onclick=closeSheet;
+    sheet.addEventListener('touchend', ()=>{ const m=sheet.style.transform.match(/translateY\(([-\d.]+)%\)/); const y=m?parseFloat(m[1]) : 0; (y>55)?closeSheet():openSheet(); }, {passive:true,capture:true});
+  })();
+
+  const dxCard = qs('#results .neu-card');
+  if(dxCard){
+    let t=null;
+    const start=()=>{ t=setTimeout(()=>{openSheet(); vibrate(15); t=null;}, 450); };
+    const end=()=>{ if(t){ clearTimeout(t); t=null; } };
+    dxCard.addEventListener('touchstart', start, passive);
+    dxCard.addEventListener('touchmove', end, passive);
+    dxCard.addEventListener('touchend', end, passive);
+    dxCard.addEventListener('touchcancel', end, passive);
+  }
+
+  const calcSection = document.querySelector('section[aria-labelledby="calc-title"]');
+  if(calcSection && !byId('sai-calc-drawer')){
+    const drawer = document.createElement('div');
+    drawer.id='sai-calc-drawer';
+    drawer.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9997;transition:transform .25s ease;pointer-events:none;';
+    const panel = document.createElement('div'); panel.className='neu-card'; panel.style.cssText='margin:0;border-top-left-radius:20px;border-top-right-radius:20px;';
+    const handle = document.createElement('div'); handle.style.cssText='display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 0;'; handle.innerHTML=`<div style="width:40px;height:4px;border-radius:999px;background:var(--bg-dark);"></div> <span style="font-size:13px;color:var(--text-secondary)">Calculators</span>`;
+    panel.appendChild(handle);
+    panel.appendChild(calcSection);
+    drawer.appendChild(panel);
+    document.body.appendChild(drawer);
+
+    const scrim = document.createElement('div'); Object.assign(scrim.style,{position:'fixed',inset:'0',background:'rgba(0,0,0,.18)',opacity:'0',pointerEvents:'none',transition:'opacity .2s ease',zIndex:9996});
+    document.body.appendChild(scrim);
+
+    function closedPx(){ const h = panel.getBoundingClientRect().height; const hh = handle.getBoundingClientRect().height||28; return Math.max(0, h - hh - 12); }
+    function setOpen(open){
+      if(open){
+        drawer.style.transform='translateY(0px)'; drawer.style.pointerEvents='auto';
+        scrim.style.opacity='1'; scrim.style.pointerEvents='auto';
+        document.body.style.paddingBottom='max(12px, env(safe-area-inset-bottom))';
+        document.body.style.overscrollBehavior='contain'; document.body.style.touchAction='none';
+      }else{
+        drawer.style.transform=`translateY(${closedPx()}px)`; drawer.style.pointerEvents='none';
+        scrim.style.opacity='0'; scrim.style.pointerEvents='none';
+        document.body.style.paddingBottom=''; document.body.style.overscrollBehavior=''; document.body.style.touchAction='';
+      }
+    }
+    requestAnimationFrame(()=> setOpen(false));
+    handle.addEventListener('click', ()=>{ const isOpen = drawer.style.transform==='translateY(0px)'; setOpen(!isOpen); });
+    scrim.addEventListener('click', ()=> setOpen(false));
+    let startY=null,lastY=null,wasOpen=false;
+    handle.addEventListener('touchstart',e=>{ startY=e.touches[0].clientY; lastY=startY; wasOpen=(drawer.style.transform==='translateY(0px)'); }, {passive:true});
+    handle.addEventListener('touchmove', e=>{ lastY=e.touches[0].clientY; const dy=lastY-startY; const target = wasOpen? Math.max(0,dy): Math.max(0, closedPx()+dy); drawer.style.transform=`translateY(${Math.min(closedPx(), target)}px)`; }, {passive:true});
+    handle.addEventListener('touchend', ()=>{ const y=parseFloat((drawer.style.transform.match(/translateY\(([-\d.]+)px\)/)||[])[1]||'0'); const halfway=closedPx()/2; setOpen(y < halfway); }, {passive:true});
+    window.addEventListener('resize', ()=>{ if(drawer.style.pointerEvents==='none') setOpen(false); }, {passive:true});
+  }
+
+  const core = byId('tab-core');
+  if (core && window.__saiAutoAnalyze === true) {
+    let t=null;
+    const deb = ()=>{ clearTimeout(t); t=setTimeout(()=> analyze({ silent:true }), 350); };
+    if(window.__saiAutoAnalyze===true){ core.addEventListener('input', deb, passive);
+     }if(window.__saiAutoAnalyze===true){ core.addEventListener('change', deb, passive);
+   }}
+})(); 
+
+/* ===================== Evidence links ===================== */
+const REF = {
+  PPP: { t:'AAO Preferred Practice Pattern: Esotropia & Exotropia', u:'https://www.aaojournal.org/article/S0161-6420%2822%2900864-8/pdf' },
+  AAPOS_AE:{ t:'AAPOS: Accommodative Esotropia', u:'https://aapos.org/glossary/accommodative-esotropia' },
+  EyeWiki_IE:{ t:'EyeWiki: Infantile Esotropia', u:'https://eyewiki.org/Infantile_Esotropia' },
+  EyeWiki_IXT:{ t:'EyeWiki: Intermittent Exotropia — subtypes', u:'https://eyewiki.org/Intermittent_Exotropia' },
+  EyeWiki_Parks:{ t:'EyeWiki: Three-Step Test (Parks-Bielschowsky)', u:'https://eyewiki.org/Three_Step_Test_for_Cyclovertical_Muscle_Palsy' },
+  EyeWiki_CN4:{ t:'EyeWiki: CN IV (SO) Palsy', u:'https://eyewiki.org/Cranial_Nerve_4_Palsy' },
+  EyeWiki_AE:{ t:'EyeWiki: Accommodative Esotropia', u:'https://eyewiki.org/Accommodative_Esotropia' },
+  NCS:{ t:'Newcastle Control Score', u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC1772020/' },
+  Hirschberg:{ t:'Hirschberg estimate (15 PD/mm)', u:'https://pubmed.ncbi.nlm.nih.gov/3557878/' },
+  ACA:{ t:'AC/A (gradient) — normal ~3–5:1', u:'https://www.aao.org/education/disease-review/strabismus-accommodative-esotropia' },
+  Duane:{ t:'AAO: Duane Retraction Syndrome', u:'https://www.aao.org/education/disease-review/strabismus-duane-retraction-syndrome' },
+  Brown:{ t:'StatPearls: Brown Syndrome', u:'https://www.ncbi.nlm.nih.gov/books/NBK563210/' },
+  OMG:{ t:'AAO: Ice test / ocular myasthenia', u:'https://www.aao.org/clinical-video/ice-test-fatigability-testing-in-ocular-myasthenia' },
+  AACE:{ t:'Review: Acute Acquired Comitant Esotropia', u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC8055253/' },
+  DI:{ t:'Divergence Insufficiency / ARDE review', u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC4836843/' },
+  ARDE:{ t:'AAO EyeNet: Age-related Distance Esotropia', u:'https://www.aao.org/eyenet/article/double-vision-strabismus-esotropia' },
+  CI:{ t:'EyeWiki: Convergence Insufficiency', u:'https://eyewiki.org/Convergence_Insufficiency' },
+  EXO:{ t:'EyeWiki: Exotropia (types incl. constant)', u:'https://eyewiki.org/Exotropia' },
+  CN6:{ t:'EyeWiki: Abducens (VI) Nerve Palsy', u:'https://eyewiki.org/Abducens_Nerve_Palsy' },
+  CN3:{ t:'EyeWiki: Acquired Oculomotor (III) Nerve Palsy', u:'https://eyewiki.org/Acquired_Oculomotor_Nerve_Palsy' },
+  TED:{ t:'EyeWiki: Strabismus in Thyroid Eye Disease', u:'https://eyewiki.org/Strabismus_in_Thyroid_Eye_Disease' },
+  ConsExo:{ t:'AAO: Consecutive Exotropia', u:'https://www.aao.org/education/basic-skills/secondary-consecutive-exotropia' },
+  ConsEso:{ t:'EyeWiki: Esotropia', u:'https://eyewiki.org/Esotropia' },
+  DVD:{ t:'StatPearls: Dissociated Vertical Deviation', u:'https://www.ncbi.nlm.nih.gov/books/NBK573061/' },
+  MFS:{ t:'EyeWiki: Monofixation syndrome', u:'https://eyewiki.org/Monofixation_syndrome' },
+  NBS:{ t:'EyeWiki: Nystagmus blockage syndrome', u:'https://eyewiki.org/Nystagmus_Blockage_Syndrome' },
+  DHD:{ t:'PMC: Dissociated Horizontal Deviation', u:'https://pmc.ncbi.nlm.nih.gov/articles/PMC2258097/' },
+  CFEOM:{ t:'EyeWiki: Congenital Fibrosis of the EOM (CFEOM)', u:'https://eyewiki.org/Congenital_Fibrosis_of_the_Extraocular_Muscles_%28CFEOM%29' },
+  MED:{ t:'EyeWiki: Monocular Elevation Deficiency', u:'https://eyewiki.org/Monocular_Elevation_Deficit' },
+  MED_AAPOS:{ t:'AAPOS: Monocular Elevation Deficiency', u:'https://aapos.org/glossary/monocular-elevation-deficiency' },
+  SES:{ t:'EyeWiki: Sagging Eye Syndrome', u:'https://eyewiki.org/Sagging_Eye_Syndrome' },
+  HES:{ t:'EyeWiki: Heavy Eye Syndrome', u:'https://eyewiki.org/Heavy_Eye_Syndrome' },
+  Fixus:{ t:'EyeWiki: Strabismus Fixus', u:'https://eyewiki.org/Strabismus_Fixus' },
+  Cranio:{ t:'EyeWiki: Craniosynostosis Syndromes', u:'https://eyewiki.org/Craniosynostosis_Syndromes' }
+};
+
+function addRefs(keys){
+  const ul = byId('refs'); ul.innerHTML = '';
+  keys.forEach(k=>{
+    const r = REF[k]; if(!r) return;
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = r.u; a.target = '_blank'; a.rel='noopener'; a.textContent = r.t;
+    li.appendChild(a); ul.appendChild(li);
+  });
+}
+
+/* Reference helpers */
+(function(){
+  const prev = addRefs;
+  const ALLOW = ['aao.org','aaojournal.org','aapos.org','eyewiki.org','ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov'];
+  addRefs = function(keys){
+    let out = Array.from(keys||[]);
+    if(window.__saiEvidenceFilterOn){
+      out = out.filter(k=>{ const r = REF[k]; if(!r) return false; try{ const host=new URL(r.u).hostname.replace(/^www./,''); return ALLOW.some(a=> host.endsWith(a)); }catch{ return false; }});
+    }
+    prev(out);
+    const ul = document.getElementById('refs'); const h3 = ul?.previousElementSibling; if(!ul||!h3) return;
+    ul.querySelectorAll('a').forEach(a=>{ try{ const host=new URL(a.href).hostname.replace(/^www./,''); if(!a.title) a.title = `${host} — ${a.textContent}`; }catch{} });
+    if(!h3.querySelector('.sai-ref-filter')){
+      const btn = document.createElement('button');
+      btn.className='sai-ref-filter neu-button'; btn.type='button'; btn.title='Toggle curated sources'; btn.textContent='🛡️';
+      Object.assign(btn.style,{padding:'4px 10px',fontSize:'12px',marginLeft:'6px'});
+      btn.addEventListener('click', ()=>{ window.__saiEvidenceFilterOn=!window.__saiEvidenceFilterOn; /* auto-analyze removed */ });
+      h3.appendChild(btn);
+    }
+    const items = Array.from(ul.querySelectorAll('li')); items.forEach(li=> li.style.display='');
+    const oldMore = byId('sai-more-refs'); oldMore?.remove();
+    if(items.length>3){
+      items.slice(3).forEach(li=> li.style.display='none');
+      const n = items.length-3;
+      const more = document.createElement('button');
+      more.id='sai-more-refs'; more.className='neu-button'; more.type='button'; more.textContent = `+${n} more`; more.style.marginTop='8px';
+      more.addEventListener('click', ()=>{
+        const hidden = ul.querySelector('li[style*="display: none"]');
+        const expand = !!hidden;
+        items.slice(3).forEach(li=> li.style.display = expand ? '' : 'none');
+        more.textContent = expand ? 'Show less' : `+${n} more`;
+      });
+      ul.parentElement.appendChild(more);
+    }
+  };
+})();
+
+/* ===================== Rule Engine ===================== */
+function analyze(opts = {}){
+  const age = num('age');
+  const onset = val('onset');
+  const primary = val('primary');
+  const d = num('angleDist'); const n = num('angleNear');
+  const delta = (Number.isFinite(d) && Number.isFinite(n)) ? (n - d) : NaN;
+  const distGreater = (Number.isFinite(d) && Number.isFinite(n)) ? ((d - n) >= 10) : false;
+  const nearGreater = (Number.isFinite(d) && Number.isFinite(n)) ? ((n - d) >= 10) : false;
+  const avg = (Number.isFinite(d) && Number.isFinite(n)) ? ((d+n)/2) : NaN;
+
+  const comitancy = val('comitancy');
+  const pattern = val('pattern');
+  const torsion = val('torsion');
+  const headTilt = val('headTilt');
+  const worseGaze = val('worseGaze');
+  const version = val('versionLimits');
+  const globalRestrict = byId('globalRestrict').checked;
+  const fatigue = val('fatigue');
+  const stereo = val('stereo');
+  const thyroid = val('thyroid');
+  const trauma = val('trauma');
+  const hyper = val('hyperopia');
+  const highMyopia = val('highMyopia');
+  const cranio = val('cranio');
+  const priorSx = val('priorSx');
+  const signPtosis = byId('signPtosis').checked;
+  const signAniso = byId('signAniso').checked;
+  const signPain = byId('signPain').checked;
+  const signProptosis = byId('signProptosis').checked;
+
+  clearResults();
+
+  if(!primary){ /* alert removed; allow silent no-op */ }
+  if(onset===''){ /* alert removed; allow silent no-op */ }
+
+  const red = [];
+  if(onset==='acute') red.push('Acute onset of strabismus — urgent evaluation recommended.');
+  if(trauma==='yes') red.push('Recent trauma — exclude orbital/neurologic injury.');
+  if(primary==='vertical' && comitancy==='incomitant') red.push('Vertical incomitant deviation — consider CN palsy, skew or restrictive causes.');
+  if(signPain) red.push('Pain with eye movements — orbital process?');
+  if(signProptosis) red.push('Proptosis — orbital disease?');
+  if(signPtosis) red.push('Ptosis — consider CN III or Horner.');
+  if(signAniso) red.push('Anisocoria — consider Horner vs Adie vs CN III (pupil-involving).');
+  if(red.length){ byId('redFlags').textContent = red.join(' '); byId('redFlagsWrap').hidden = false; }
+
+  byId('comitOut').textContent = (comitancy==='comitant') ? 'Comitant' : (comitancy==='incomitant' ? 'Incomitant' : '—');
+
+  const candidates = [];
+
+  const vPatternBoost = (pattern==='V') ? 0.02 : 0;
+  const aPatternBoost = (pattern==='A') ? 0.02 : 0;
+  const cranioBoost = (cranio==='yes' && pattern!=='none') ? 0.01 : 0;
+  const worseUp = (worseGaze==='up');
+  const worseDown = (worseGaze==='down');
+
+  if(primary==='eso' && onset==='infant'){
+    let score = 0.78; 
+    if(comitancy==='comitant') score += 0.07; 
+    if(Number.isFinite(avg) && avg>=25) score += 0.05;
+    if(pattern==='V') score += vPatternBoost; 
+    score += cranioBoost;
+    candidates.push({ key:'Infantile esotropia', score, refs:['PPP','EyeWiki_IE'] });
+  }
+  if(primary==='eso' && (onset==='child' || onset==='adult')){
+    let score = 0.55; 
+    if(comitancy==='comitant') score += 0.08; 
+    if(['med','high'].includes(hyper)) score += 0.15; 
+    if(nearGreater) score += 0.08;
+    if(pattern==='V') score += 0.02; 
+    candidates.push({ key:'Accommodative esotropia (consider high AC/A if near >> distance)', score, refs:['AAPOS_AE','ACA','EyeWiki_AE'] });
+  }
+  if(primary==='eso' && comitancy==='comitant' && (onset==='child' || onset==='adult') && hyper!=='high' && !nearGreater && !distGreater){
+    candidates.push({ key:'Non-accommodative comitant esotropia', score:0.5, refs:['PPP'] });
+  }
+  if(primary==='eso' && onset==='acute' && comitancy==='comitant'){
+    candidates.push({ key:'Acute acquired comitant esotropia (AACE)', score:0.72, refs:['AACE','PPP'] });
+  }
+  if(primary==='eso' && (distGreater) && (onset==='adult' || (Number.isFinite(age) && age>=40)) ){
+    candidates.push({ key:'Divergence insufficiency (age-related distance esotropia)', score:0.7, refs:['DI','ARDE'] });
+  }
+  if(primary==='eso' && stereo==='nil' && Number.isFinite(avg) && avg>=20){
+    candidates.push({ key:'Sensory esotropia', score:0.56, refs:['PPP'] });
+  }
+  if(primary==='eso' && priorSx==='yes'){
+    candidates.push({ key:'Consecutive esotropia (post-exo surgery)', score:0.6, refs:['ConsEso'] });
+  }
+
+  if(primary==='exo' && (onset==='child' || onset==='adult')){
+    let score = 0.6; 
+    if(comitancy==='comitant') score += 0.06; 
+    if(['good','fair'].includes(stereo)) score += 0.04; 
+    if(nearGreater) score += 0.03;
+    if(pattern==='V') score += vPatternBoost; 
+    score += cranioBoost;
+    candidates.push({ key:'Intermittent exotropia', score, refs:['EyeWiki_IXT','NCS','PPP'] });
+  }
+  if(primary==='exo' && comitancy==='comitant' && (onset==='child' || onset==='adult') && (avg>=30)){
+    let score = 0.6;
+    if(pattern==='V') score += 0.02;
+    candidates.push({ key:'Constant exotropia', score, refs:['EXO','PPP'] });
+  }
+  if(primary==='exo' && (distGreater) && (onset==='child' || onset==='adult')){
+    candidates.push({ key:'Divergence excess (true vs pseudo)', score:0.57, refs:['EyeWiki_IXT'] });
+  }
+  if(primary==='exo' && nearGreater){
+    candidates.push({ key:'Convergence insufficiency (near > distance exo)', score:0.58, refs:['CI'] });
+  }
+  if(primary==='exo' && priorSx==='yes'){
+    candidates.push({ key:'Consecutive exotropia (post-eso surgery)', score:0.6, refs:['ConsExo'] });
+  }
+  if(primary==='exo' && stereo==='nil' && Number.isFinite(avg) && avg>=20){
+    candidates.push({ key:'Sensory exotropia', score:0.56, refs:['PPP'] });
+  }
+
+  if(primary==='vertical' && comitancy==='incomitant' && version==='so' && (onset!=='infant')){
+    let score = 0.7;
+    if(worseDown) score += 0.02; 
+    score += cranioBoost + aPatternBoost; 
+    candidates.push({ key:'CN IV (SO) palsy — underaction of SO', score, refs:['EyeWiki_CN4','EyeWiki_Parks'] });
+  }
+  if(primary==='vertical' && comitancy==='incomitant' && version==='ir' && (onset!=='infant')){
+    let score = 0.58;
+    if(worseDown) score += 0.02;
+    candidates.push({ key:'Inferior rectus palsy/restriction', score, refs:['PPP'] });
+  }
+  if(primary==='vertical' && comitancy==='incomitant' && version==='sr' && (onset!=='infant')){
+    let score = 0.58;
+    if(worseUp) score += 0.02;
+    candidates.push({ key:'Superior rectus palsy', score, refs:['PPP'] });
+  }
+  if(primary==='vertical' && comitancy==='incomitant' && version==='so' && headTilt!=='none'){
+    let score = 0.7;
+    if(worseDown) score += 0.02;
+    candidates.push({ key:'CN IV (SO) palsy (head tilt present)', score, refs:['EyeWiki_CN4','EyeWiki_Parks'] });
+  }
+  if(primary==='vertical' && comitancy==='incomitant' && version==='sr' && headTilt!=='none'){
+    candidates.push({ key:'Skew deviation (consider) vs SR palsy', score:0.5, refs:['EyeWiki_Parks'] });
+  }
+  if(version==='elevAll'){
+    candidates.push({ key:'Monocular Elevation Deficiency (double elevator palsy)', score:0.7, refs:['MED','MED_AAPOS'] });
+  }
+  if(version==='lr' && comitancy==='incomitant' && (onset==='infant' || onset==='child')){
+    candidates.push({ key:'Duane retraction syndrome', score:0.62, refs:['Duane'] });
+  }
+  if(version==='soelev'){
+    let score = 0.67 + aPatternBoost; 
+    candidates.push({ key:'Brown syndrome (SO tendon restriction)', score, refs:['Brown'] });
+  }
+  if(thyroid==='yes' && comitancy==='incomitant'){
+    candidates.push({ key:'Restrictive strabismus (Thyroid Eye Disease)', score:0.62, refs:['TED'] });
+  }
+  if(primary==='vertical' && onset==='acute' && (torsion!=='none' && torsion!=='unknown') && headTilt!=='none'){
+    candidates.push({ key:'Skew deviation (supranuclear)', score:0.6, refs:['EyeWiki_Parks'] });
+  }
+  if(version==='mr' && comitancy==='incomitant' && (onset==='adult' || (Number.isFinite(age) && age>14)) ){
+    candidates.push({ key:'Internuclear ophthalmoplegia (consider MLF lesion)', score:0.52, refs:['CN3'] });
+  }
+  if(fatigue==='yes'){
+    candidates.push({ key:'Ocular myasthenia gravis', score:0.6, refs:['OMG'] });
+  }
+  if(trauma==='yes' && (primary==='vertical' || version==='soelev' || version==='mr' || version==='lr')){
+    candidates.push({ key:'Restrictive strabismus (orbital floor entrapment)', score:0.6, refs:['PPP'] });
+  }
+  if(priorSx==='yes' && comitancy==='incomitant'){
+    candidates.push({ key:'Restrictive strabismus (post-scleral buckle/retinal surgery)', score:0.58, refs:['PPP'] });
+  }
+
+  if(version==='lr' && comitancy==='incomitant' && (onset==='adult' || onset==='acute' || (Number.isFinite(age) && age>=6))){
+    let score = 0.64;
+    if(onset==='acute' || trauma==='yes') score += 0.06;
+    candidates.push({ key:'CN VI (abducens) palsy — abduction deficit', score, refs:['CN6'] });
+  }
+
+  if(Number.isFinite(age) && age>=55 && (primary==='eso' || primary==='vertical')){
+    candidates.push({ key:'Sagging Eye Syndrome (age-related connective tissue)', score:0.6, refs:['SES'] });
+  }
+  if(highMyopia==='yes' && (Number.isFinite(age) && age>=55) && version==='lr'){
+    candidates.push({ key:'Heavy Eye Syndrome (pathologic myopia) — consider LR-SR band rupture', score:0.64, refs:['HES','Fixus'] });
+  }
+  if(onset==='infant' && version==='none' && globalRestrict){
+    candidates.push({ key:'CFEOM (CCDD — congenital fibrosis of EOM)', score:0.65, refs:['CFEOM'] });
+  }
+
+  const addCand = (key, base, refs=[]) => candidates.push({ key, score: base, refs });
+  const bumpIfIncludes = (needle, delta) => { candidates.forEach(c => { if (c.key.includes(needle)) c.score += delta; }); };
+
+  if (pattern === 'V') {
+    bumpIfIncludes('Intermittent exotropia', 0.03);
+    bumpIfIncludes('Constant exotropia', 0.02);
+    bumpIfIncludes('Infantile esotropia', 0.02);
+    if (version !== 'soelev') addCand('V-pattern with IO overaction phenotype (consider IOOA vs pseudo-Brown)', 0.55, ['PPP']);
+  }
+  if (pattern === 'A') {
+    bumpIfIncludes('CN IV (SO) palsy', 0.03);
+    bumpIfIncludes('Superior rectus palsy', 0.02);
+    addCand('A-pattern with SO overaction phenotype (consider SOOA vs SR underaction)', 0.54, ['EyeWiki_Parks']);
+  }
+  if (torsion === 'excyclo' && pattern === 'V') bumpIfIncludes('Brown syndrome', 0.02);
+  if (torsion === 'incyclo' && pattern === 'A') bumpIfIncludes('CN IV (SO) palsy', 0.02);
+  if (headTilt !== 'none' && pattern === 'A') bumpIfIncludes('CN IV (SO) palsy', 0.02);
+  if (cranio === 'yes') {
+    if (pattern === 'V') bumpIfIncludes('Brown syndrome', 0.02);
+    if (pattern === 'A') bumpIfIncludes('CN IV (SO) palsy', 0.02);
+    if (pattern === 'A' || pattern === 'V') addCand('Pattern strabismus associated with craniosynostosis', 0.56, ['Cranio']);
+  }
+
+  candidates.sort((a,b)=> b.score - a.score);
+  const best = candidates[0] || { key:'Insufficient data', score:0.2, refs:[] };
+  const second = candidates[1];
+
+  const margin = second ? Math.max(0, best.score - second.score) : 0.25;
+  let confRaw = 10 + (best.score * 85);
+  if(margin < 0.05) confRaw -= 8;
+  else if(margin < 0.10) confRaw -= 4;
+  const conf = clamp(Math.round(confRaw), 10, 95);
+  byId('confMeter').value = conf; byId('confLabel').textContent = conf + '%';
+
+  byId('dx').textContent = best.key;
+  const tags = [];
+  if(Number.isFinite(delta)) tags.push(`Near–Distance Δ ${delta} PD`);
+  if(distGreater) tags.push('Distance > Near');
+  if(nearGreater) tags.push('Near > Distance');
+  if(pattern!=='none') tags.push(`${pattern}-pattern`);
+  if(torsion!=='unknown' && torsion!=='none') tags.push(torsion);
+  if(hyper!=='unknown') tags.push(`Hyperopia: ${byId('hyperopia').selectedOptions[0].text}`);
+  if(highMyopia!=='unknown') tags.push(`High myopia: ${byId('highMyopia').selectedOptions[0].text}`);
+  if(priorSx==='yes') tags.push('Prior strabismus surgery');
+  if(globalRestrict) tags.push('Global restriction');
+  if(tags.length){ tags.forEach(t=>{ const e = document.createElement('span'); e.className='tag'; e.innerHTML=`<span class="dot"></span>${t}`; byId('dxTags').appendChild(e); }); }
+
+  const dd = candidates.slice(1,7).map(c=> c.key);
+  if(onset==='infant' && (primary==='eso' || primary==='exo')){ dd.push('DVD — dissociated vertical deviation'); dd.push('Monofixation syndrome (amblyopia risk)'); }
+  if(primary==='exo' && distGreater){ dd.push('Pseudo vs true divergence excess distinction (patch test)'); }
+  if(onset==='infant' && primary==='eso'){ dd.push('Nystagmus blockage syndrome (consider)'); }
+  if(highMyopia==='yes' && (Number.isFinite(age) && age>=60)) dd.push('Differentiate Heavy Eye vs Sagging Eye syndromes');
+  if(dd.length===0) dd.push('Provide more findings to expand the differential.');
+  dd.forEach(x=>{ const li = document.createElement('li'); li.textContent = x; byId('ddx').appendChild(li); });
+
+  const plan = [];
+  if(best.key.includes('Infantile esotropia')){
+    plan.push('Full cycloplegic refraction; screen for DVD/IO overaction; timely alignment if persistent large angle.');
+  }
+  if(best.key.startsWith('Accommodative esotropia')){
+    plan.push('Trial full hyperopic correction; assess AC/A (gradient ≥5 suggests high AC/A); consider bifocals for convergence excess.');
+  }
+  if(best.key==='Non-accommodative comitant esotropia'){
+    plan.push('Rule out neurologic/functional causes; manage with prisms vs surgery depending on magnitude and symptoms.');
+  }
+  if(best.key.includes('Intermittent exotropia')){
+    plan.push('Assess control (Newcastle score), stereo, and symptoms; consider overminus/prisms/surgery per control and angle.');
+  }
+  if(best.key.includes('Divergence insufficiency')){
+    plan.push('Prisms helpful for distance diplopia; evaluate for SES/ARDE spectrum; surgery if persistent/symptomatic.');
+  }
+  if(best.key.includes('Convergence insufficiency')){
+    plan.push('Near point/convergence exercises; reserve surgery for refractory symptomatic cases with large near exo.');
+  }
+  if(best.key.includes('CN IV (SO)')){
+    plan.push('Parks-Bielschowsky three-step to confirm; prisms if small; surgery if stable and symptomatic.');
+  }
+  if(best.key.includes('Sensory')){
+    plan.push('Treat underlying sensory cause; consider prisms/occlusion; surgery if stable persistent deviation.');
+  }
+  if(best.key.includes('Skew')){
+    plan.push('Perform upright-supine test; urgent neuro work-up for brainstem/cerebellar disease as indicated.');
+  }
+  if(best.key.includes('Internuclear')){
+    plan.push('Supranuclear adduction deficit (MLF lesion); evaluate for MS (younger) vs stroke (older); manage diplopia and underlying cause.');
+  }
+  if(best.key.includes('Brown')){
+    plan.push('Differentiate restriction vs IO overaction; observe if minimal; surgery if symptomatic primary position hypotropia or significant chin-up.');
+  }
+  if(best.key.includes('Duane')){
+    plan.push('Treat abnormal head posture; consider transposition procedures if significant abduction deficit.');
+  }
+  if(best.key.includes('Thyroid')){
+    plan.push('Control inflammation; prisms/occlusion; defer surgery until inactivity; plan multi-stage care if decompression needed.');
+  }
+  if(best.key.includes('myasthenia')){
+    plan.push('Order AChR/MuSK as appropriate; ice test positive supports; coordinate with neurology.');
+  }
+  if(best.key.includes('entrapment')){
+    plan.push('Urgent imaging; consult oculoplastics/maxillofacial; watch for oculocardiac reflex.');
+  }
+  if(best.key.includes('CFEOM')){
+    plan.push('Counsel as CCDD; strabismus surgery for alignment in primary position; beware fibrosis and limited ductions.');
+  }
+  if(best.key.includes('Heavy Eye')){
+    plan.push('Consider imaging for LR-SR band; loop myopexy/Jensen-type procedures +/- MR recession for contracture.');
+  }
+  if(best.key.includes('Sagging Eye')){
+    plan.push('Typically non-myopic older adults with comitant distance eso ± small vertical; prisms often effective; differentiate from Heavy Eye in high myopia.');
+  }
+  if(best.key.includes('CN VI (abducens)')){
+    plan.push('Consider microvascular causes in older adults; image if atypical or progressive; manage diplopia with prisms/occlusion; many recover spontaneously.');
+  }
+
+  if (pattern === 'V') {
+    plan.push('Pattern plan: evaluate for inferior oblique overaction (IOOA) — look for overelevation in adduction; document pattern magnitude in upgaze vs downgaze.');
+    plan.push('Differentiate pseudo-Brown vs IOOA: perform forced-duction testing if elevation is limited in adduction.');
+    if (version === 'soelev') plan.push('If limited elevation in adduction (Brown phenotype): consider observation if minimal; otherwise SO tendon procedures per severity and symptoms.');
+    if (onset === 'infant' && primary === 'eso') plan.push('Infantile eso with V-pattern: screen for IO overaction and DVD; IO weakening may be combined with horizontal surgery.');
+  }
+  if (pattern === 'A') {
+    plan.push('Pattern plan: assess for SO overaction vs SR underaction; quantify A-pattern between upgaze and downgaze.');
+    plan.push('Use Parks-Bielschowsky three-step and torsion evaluation to separate SO palsy/overaction from vertical rectus causes.');
+    if (torsion === 'incyclo') plan.push('Incyclotorsion with A-pattern increases suspicion for SO involvement; plan to manage cyclo symptoms.');
+  }
+  if (cranio === 'yes') {
+    plan.push('Craniosynostosis: pattern strabismus common (V > A) with excyclotorsion; coordinate with craniofacial team; consider orbital anatomy in planning.');
+    if (pattern === 'V' || pattern === 'A') plan.push('Surgical strategy in cranio: target the pattern (oblique/vertical rectus adjustments) in addition to horizontal alignment.');
+  }
+
+  if(plan.length===0) plan.push('General: correct refractive error, monitor alignment/stereo, consider prisms/occlusion/surgery per stability and symptoms.');
+  plan.forEach(x=>{ const li = document.createElement('li'); li.textContent = x; byId('plan').appendChild(li); });
+
+  const why = [];
+  if(Number.isFinite(age)) why.push(`Age: ${age}.`);
+  if(onset) why.push(`Onset: ${byId('onset').selectedOptions[0].text}.`);
+  if(primary) why.push(`Primary deviation: ${byId('primary').selectedOptions[0].text}.`);
+  if(Number.isFinite(d)) why.push(`Distance angle: ${d} PD.`);
+  if(Number.isFinite(n)) why.push(`Near angle: ${n} PD.`);
+  if(pattern!=='none') why.push(`${pattern}-pattern.`);
+  if(torsion!=='unknown') why.push(`Torsion: ${byId('torsion').selectedOptions[0].text}.`);
+  if(headTilt!=='none') why.push(`Head tilt: ${byId('headTilt').selectedOptions[0].text}.`);
+  if(worseGaze!=='none') why.push(`Worse gaze: ${byId('worseGaze').selectedOptions[0].text}.`);
+  if(version!=='none') why.push(`Version/duction finding: ${byId('versionLimits').selectedOptions[0].text}.`);
+  if(stereo!=='unknown') why.push(`Stereo: ${stereo}.`);
+  if(hyper!=='unknown') why.push(`Hyperopia: ${byId('hyperopia').selectedOptions[0].text}.`);
+  if(highMyopia!=='unknown') why.push(`High myopia: ${byId('highMyopia').selectedOptions[0].text}.`);
+  if(priorSx==='yes') why.push('History of prior strabismus surgery.');
+  if(signPtosis||signAniso||signPain||signProptosis) why.push('Associated signs present.');
+  byId('why').textContent = why.join(' ');
+
+  const edu = [];
+  if(best.key.startsWith('Accommodative')) edu.push('High AC/A suggests near > distance esotropia; gradient method (+3.00 D) quantifies ratio (normal ~3–5 PD/D).');
+  if(best.key.includes('Intermittent exotropia')) edu.push('Control scores (e.g., Newcastle) guide timing of surgery; record distance/near and with dissociation.');
+  if(best.key.includes('CN IV')) edu.push('Parks-Bielschowsky three-step isolates the paretic cyclovertical muscle; most useful for SO palsy.');
+  if(version==='soelev') edu.push('Limited elevation in adduction suggests Brown syndrome (SO tendon/trochlea restriction), distinct from IO overaction.');
+  if(onset==='infant' && (primary==='eso' || primary==='exo')) edu.push('DVD and monofixation commonly accompany infantile strabismus; look for latent nystagmus and IO overaction.');
+  if(nearGreater && primary==='exo') edu.push('Convergence insufficiency often causes near symptoms; exercises first-line, surgery for refractory large near exo.');
+  if(distGreater && primary==='eso') edu.push('Age-related distance esotropia increasingly recognized; prisms can be effective; surgery if persistent.');
+  if(best.key.includes('Heavy Eye')) edu.push('Myopic strabismus fixus with limited abduction/elevation; loop myopexy can restore vectors.');
+  if(best.key.includes('Sagging Eye')) edu.push('SES is age-related connective-tissue degeneration, often non-myopic; differentiate from Heavy Eye in pathologic myopia.');
+  if(best.key.includes('CFEOM')) edu.push('CFEOM is a congenital cranial dysinnervation disorder with fibrosis and severe duction limits, often with ptosis.');
+  if(best.key.includes('Elevat')) edu.push('MED causes elevation deficit; consider IR restriction vs SR palsy; forced ductions guide IR recession vs transposition.');
+  if(best.key.includes('Internuclear')) edu.push('INO: consider MS in younger patients and stroke in older adults; manage diplopia and underlying cause.');
+
+  if (pattern === 'V') {
+    edu.push('V-pattern commonly reflects IO overaction; expect greater exotropia (or less esotropia) in upgaze vs downgaze.');
+    edu.push('Pseudo-Brown vs IOOA: IOOA shows overelevation without true block; Brown shows restrictive elevation in adduction on forced ductions.');
+  }
+  if (pattern === 'A') {
+    edu.push('A-pattern often reflects SO overaction or SR underaction; correlate with head tilt and torsion.');
+    if (torsion === 'incyclo') edu.push('Incyclotorsion supports SO involvement; manage cyclo symptoms in planning.');
+  }
+  if (cranio === 'yes') {
+    edu.push('Craniosynostosis frequently associates with V-pattern, excyclotorsion, and oblique dysfunction; individualized planning is key.');
+  }
+  if (pattern === 'V' && version === 'soelev') {
+    edu.push('Limited elevation in adduction with V-pattern points toward Brown phenotype rather than simple IO overaction.');
+  }
+  if(edu.length===0) edu.push('Review references for diagnostic pearls and management nuances.');
+  byId('edu').textContent = edu.join(' ');
+
+  const refKeys = new Set(best.refs || []);
+  if(best.key.includes('Intermittent exotropia')){ refKeys.add('NCS'); refKeys.add('EyeWiki_IXT'); }
+  if(best.key.includes('Accommodative')){ refKeys.add('AAPOS_AE'); refKeys.add('ACA'); }
+  if(best.key.includes('Divergence insufficiency')){ refKeys.add('ARDE'); }
+  if(onset==='infant' && (primary==='eso' || primary==='exo')){ refKeys.add('DVD'); refKeys.add('NBS'); refKeys.add('MFS'); refKeys.add('DHD'); }
+  if(primary==='eso' || primary==='exo') refKeys.add('PPP');
+  if(priorSx==='yes'){ if(primary==='exo') refKeys.add('ConsExo'); if(primary==='eso') refKeys.add('ConsEso'); }
+  if(best.key.includes('CFEOM')) refKeys.add('CFEOM');
+  if(best.key.includes('Elevat')){ refKeys.add('MED'); refKeys.add('MED_AAPOS'); }
+  if(best.key.includes('Sagging')) refKeys.add('SES');
+  if(best.key.includes('Heavy Eye')){ refKeys.add('HES'); refKeys.add('Fixus'); }
+  if(cranio==='yes') refKeys.add('Cranio');
+  if(usedHirschberg) refKeys.add('Hirschberg');
+
+  if (pattern === 'V') {
+    if (primary === 'eso' || primary === 'exo') refKeys.add('PPP');
+    if (version === 'soelev') refKeys.add('Brown');
+    if (torsion === 'excyclo') refKeys.add('EyeWiki_Parks');
+  }
+  if (pattern === 'A') {
+    refKeys.add('EyeWiki_Parks');
+    if (headTilt !== 'none' || torsion === 'incyclo') refKeys.add('EyeWiki_CN4');
+  }
+  if (cranio === 'yes' && (pattern === 'A' || pattern === 'V')) refKeys.add('Cranio');
+
+  addRefs([...refKeys]);
+
+  (function(){
+    const stickyEl = document.querySelector('.sai-sticky');
+    if (stickyEl) {
+      stickyEl.querySelector('.dx').textContent = `${best.key}  •  ${conf}%`;
+      const arc = stickyEl.querySelector('#saiArc');
+      if (arc) arc.setAttribute('stroke-dashoffset', String(100 - conf));
+    }
+    const rf = byId('redFlagsWrap');
+    if (rf && !rf.hidden){
+      rf.classList.remove('sai-flag-pulse'); void rf.offsetWidth; rf.classList.add('sai-flag-pulse');
+    }
+  })();
+
+  if(!opts.silent) byId('resultsTitle').focus?.();
+}
+
+function showTab(id){ /* single-page layout */ }
+function clearResults(){
+  ['dxTags','ddx','plan','refs'].forEach(id => byId(id).innerHTML = '');
+  byId('dx').textContent = '—';
+  byId('why').textContent = '';
+  byId('edu').textContent = '';
+  byId('confMeter').value = 0; byId('confLabel').textContent = '0%';
+  byId('redFlagsWrap').hidden = true; byId('redFlags').textContent = '';
+  byId('comitOut').textContent = '—';
+}
+
+/* === EOM Spark + Parks micro-wizard === */
+(function(){
+  const host = document.querySelector('#results .neu-card');
+  if(host && !document.getElementById('sai-eom-spark')){
+    const wrap = document.createElement('div');
+    wrap.id='sai-eom-spark';
+    wrap.style.cssText='position:absolute; top:10px; right:10px; width:120px; height:120px; pointer-events:none; opacity:.95;';
+    wrap.innerHTML = `
+      <svg viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Extraocular muscles">
+        <defs>
+          <style>.m{fill:none;stroke:var(--bg-dark);stroke-width:4;opacity:.8}.h{stroke:var(--accent);stroke-width:6;filter:url(#glow)}</style>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <circle cx="60" cy="60" r="34" fill="none" stroke="var(--text-secondary)" opacity=".2"/>
+        <line id="m-MR" class="m" x1="94" y1="60" x2="120" y2="60"/><line id="m-LR" class="m" x1="0" y1="60" x2="26" y2="60"/>
+        <line id="m-SR" class="m" x1="60" y1="0" x2="60" y2="26"/><line id="m-IR" class="m" x1="60" y1="94" x2="60" y2="120"/>
+        <path id="m-SO" class="m" d="M 86 26 Q 60 18 34 26"/><path id="m-IO" class="m" d="M 34 94 Q 60 102 86 94"/>
+      </svg>`;
+    host.style.position='relative';
+    host.appendChild(wrap);
+  }
+  function musclesForDx(dx){
+    dx=(dx||'').toLowerCase(); const ms=[];
+    if(dx.includes('cn vi')||dx.includes('abducens')) ms.push('m-LR');
+    if(dx.includes('duane')) ms.push('m-LR');
+    if(dx.includes('cn iv')||dx.includes('superior oblique')) ms.push('m-SO');
+    if(dx.includes('brown')) ms.push('m-SO');
+    if(dx.includes('monocular elevation deficiency')||dx.includes('elevat')) ms.push('m-SR','m-IR');
+    if(dx.includes('heavy eye')||dx.includes('sagging eye')) ms.push('m-LR','m-SR');
+    if(dx.includes('convergence insufficiency')||dx.includes('internuclear')) ms.push('m-MR');
+    return ms;
+  }
+  if(!window.__sai_v2_sparkPatch && typeof analyze==='function'){
+    window.__sai_v2_sparkPatch = true;
+    const _an = analyze;
+    window.analyze = function(){
+      const r = _an.apply(this, arguments);
+      const dx = (document.getElementById('dx')?.textContent||'').trim();
+      ['m-MR','m-LR','m-SR','m-IR','m-SO','m-IO'].forEach(id=> document.getElementById(id)?.classList.remove('h'));
+      musclesForDx(dx).forEach(id=> document.getElementById(id)?.classList.add('h'));
+      return r;
+    };
+  }
+
+  let parks = document.getElementById('sai-parks');
+  if(!parks){
+    parks = document.createElement('div');
+    parks.id='sai-parks';
+    parks.style.cssText='position:fixed;left:0;right:0;bottom:0;transform:translateY(110%);transition:transform .25s ease;z-index:10040;background:var(--bg);box-shadow:0 -10px 24px rgba(0,0,0,.15);border-top-left-radius:20px;border-top-right-radius:20px;padding:14px;';
+    parks.innerHTML=`
+      <div style="width:40px;height:4px;border-radius:999px;background:var(--bg-dark);margin:6px auto 12px;"></div>
+      <button type="button" class="neu-button" id="sai-parks-close" style="position:absolute;right:12px;top:8px;padding:4px 10px;border-radius:999px;">×</button>
+      <h3 style="text-align:center;margin-bottom:8px;">Parks (micro)</h3>
+      <div id="sai-p1"><p style="margin-bottom:8px;">1) Which gaze worsens the vertical deviation?</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <button class="neu-button" data-val="left">Left</button><button class="neu-button" data-val="right">Right</button>
+          <button class="neu-button" data-val="up">Up</button><button class="neu-button" data-val="down">Down</button>
+        </div>
+      </div>
+      <div id="sai-p2" style="display:none;margin-top:10px;"><p style="margin-bottom:8px;">2) Which head tilt increases the vertical?</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <button class="neu-button" data-val="left">Left tilt</button><button class="neu-button" data-val="right">Right tilt</button>
+        </div>
+        <button class="neu-button" id="sai-back-2" style="width:100%;margin-top:8px;">Back</button>
+      </div>
+      <div id="sai-p3" style="display:none;margin-top:10px;"><p style="margin-bottom:8px;">3) Torsion noted?</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <button class="neu-button" data-val="incyclo">Incyclo</button><button class="neu-button" data-val="excyclo">Excyclo</button>
+        </div>
+        <button class="neu-button" id="sai-back-3" style="width:100%;margin-top:8px;">Back</button>
+      </div>
+      <div id="sai-pR" style="display:none;margin-top:12px;">
+        <div class="neu-card" style="padding:10px;"><strong>Suggestion:</strong> <span id="sai-parks-sug">—</span>
+          <div style="margin-top:6px;font-size:13px;color:var(--text-secondary);">See: EyeWiki — Three-Step Test (Parks-Bielschowsky)</div>
+        </div>
+        <button class="neu-button" id="sai-close-R" style="width:100%;margin-top:8px;">Close</button>
+      </div>`;
+    document.body.appendChild(parks);
+
+    const scrim = document.createElement('div'); scrim.id='sai-parks-scrim';
+    Object.assign(scrim.style,{position:'fixed',inset:'0',background:'rgba(0,0,0,.25)',opacity:'0',pointerEvents:'none',transition:'opacity .2s ease',zIndex:9999});
+    document.body.appendChild(scrim);
+
+    const s = {gaze:null, tilt:null, torsion:null};
+    const show = (id)=> ['sai-p1','sai-p2','sai-p3','sai-pR'].forEach(k=> (document.getElementById(k).style.display = (k===id?'block':'none')));
+    function open(){ parks.style.transform='translateY(0)'; scrim.style.opacity='1'; scrim.style.pointerEvents='auto'; document.body.style.touchAction='none'; history.pushState({saiParks:1}, ''); }
+    function close(){ parks.style.transform='translateY(110%)'; scrim.style.opacity='0'; scrim.style.pointerEvents='none'; document.body.style.touchAction=''; if(history.state?.saiParks) history.back(); }
+
+    document.querySelectorAll('#sai-p1 .neu-button').forEach(b=> b.onclick=()=>{ s.gaze=b.dataset.val; show('sai-p2'); });
+    document.querySelectorAll('#sai-p2 .neu-button[data-val]').forEach(b=> b.onclick=()=>{ s.tilt=b.dataset.val; show('sai-p3'); });
+    document.querySelectorAll('#sai-p3 .neu-button[data-val]').forEach(b=> b.onclick=()=>{ s.torsion=b.dataset.val;
+      const out = byId('sai-parks-sug');
+      if(s.torsion==='excyclo' && (s.gaze==='down'||s.tilt)) out.textContent='Consider Superior Oblique (SO) palsy pattern.';
+      else if(s.torsion==='incyclo' && s.gaze==='up') out.textContent='Consider SO overaction or Superior Rectus involvement.';
+      else if(s.gaze==='down') out.textContent='Worse in downgaze: IR/SO pathways; test SO vs IR with three-step.';
+      else if(s.gaze==='up') out.textContent='Worse in upgaze: SR/IO pathways; correlate with torsion & tilt.';
+      else out.textContent='Use three-step test sequence to isolate the cyclovertical muscle.';
+      show('sai-pR');
+    });
+    byId('sai-back-2').onclick = ()=> show('sai-p1');
+    byId('sai-back-3').onclick = ()=> show('sai-p2');
+
+    byId('sai-parks-close').onclick = close;
+    byId('sai-close-R').onclick = close;
+    scrim.addEventListener('click', close);
+    let startY=null, curY=null;
+    parks.addEventListener('touchstart', e=>{ startY=e.touches[0].clientY; curY=startY; }, {passive:true});
+    parks.addEventListener('touchmove', e=>{ curY=e.touches[0].clientY; const dy=Math.max(0, curY-startY); parks.style.transform = `translateY(${Math.min(110, dy/1.5)}%)`; }, {passive:true});
+    parks.addEventListener('touchend', ()=>{ const m=parks.style.transform.match(/translateY\(([-\d.]+)%\)/); const y=m?parseFloat(m[1]):0; (y>25)?close():open(); }, {passive:true});
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+    window.addEventListener('popstate', ()=>{ if(parks.style.transform==='translateY(0px)' || parks.style.transform==='translateY(0)'){ close(); } });
+
+    if(!byId('sai-parks-fab')){
+      const fab = document.createElement('button'); fab.id='sai-parks-fab'; fab.type='button'; fab.className='neu-button';
+      fab.style.cssText='position:fixed;right:12px;bottom:80px;z-index:10020;padding:10px 12px;border-radius:999px;font-size:12px;';
+      fab.textContent='Parks'; fab.title='Parks micro-wizard';
+      fab.onclick = ()=>{ open(); show('sai-p1'); };
+      document.body.appendChild(fab);
+    }
+  }
+})();
+</script>
+        </article>
+
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>About</h2>
+          <p>Clinical engine, Stellar styling. References and logic preserved.</p>
+        </section>
+        <p class="copyright">&copy; Strabismus AI. Design: HTML5 UP (Stellar).</p>
+      </footer>
+    </div>
+
+    <!-- Scripts (Stellar assets) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Anchor guard: only intercept links inside #tool -->
+    <script id="sai-anchor-guard">
+    (function(){
+      if(window.__sai_anchor_guard) return; window.__sai_anchor_guard=true;
+      function inTool(el){ try { return !!el.closest("article#tool"); } catch(_) { return false; } }
+      document.addEventListener("click", function(e){
+        var a=e.target.closest && e.target.closest("a[href^='#']");
+        if(!a) return;
+        var href=a.getAttribute("href");
+        if(href==="#tool") return;
+        if(inTool(a)){
+          var t=document.querySelector(href);
+          if(t){ e.preventDefault(); t.scrollIntoView({behavior:"smooth",block:"start"}); }
+        }
+      }, {capture:true});
+    })();
+    </script>
+
+    <!-- Late analyze() hook (idempotent) -->
+    <script id="sai-an-late">
+    (function(){
+      if(window.__sai_late_hook) return;
+      if(window.__sai_v2_patchAnalyze) return;
+      window.__sai_late_hook=true;
+      function hook(){
+        if(typeof analyze==="function"){
+          const _an=analyze;
+          if(!_an.__saiWrapped){
+            const fn=function(){
+              const r=_an.apply(this,arguments);
+              const s=document.querySelector('.sai-sticky');
+              if(s){
+                const dx=(document.getElementById('dx')?.textContent||'—').trim();
+                const conf=Number(document.getElementById('confMeter')?.value||0);
+                s.querySelector('.dx').textContent=dx+'  •  '+(document.getElementById('confLabel')?.textContent||'0%');
+                s.querySelector('#saiArc')?.setAttribute('stroke-dashoffset',String(100-conf));
+              }
+              const rf=document.getElementById('redFlagsWrap');
+              if(rf && !rf.hidden){ rf.classList.remove('sai-flag-pulse'); void rf.offsetWidth; rf.classList.add('sai-flag-pulse'); }
+              return r;
+            };
+            fn.__saiWrapped=true; window.analyze=fn;
+          }
+        } else setTimeout(hook,120);
+      }
+      hook();
+    })();
+    </script>
+<script id="sai-diag">(function(){
+  if(window.__sai_diag) return; window.__sai_diag=true;
+  function el(tag,css){var e=document.createElement(tag); if(css) Object.assign(e.style,css); return e;}
+  var box=el("div",{position:"fixed",right:"10px",bottom:"10px",maxWidth:"85%",zIndex:10050,font:"12px/1.4 system-ui,Segoe UI,Roboto,Arial",background:"#111",color:"#fff",borderRadius:"10px",padding:"10px 12px",boxShadow:"0 6px 18px rgba(0,0,0,.4)",opacity:"0.95",display:"none"});
+  box.id="sai-diag-pane"; var h=el("div"); h.textContent="SAI Diagnostics"; h.style.fontWeight="700"; h.style.marginBottom="6px"; box.appendChild(h);
+  var pre=el("pre",{whiteSpace:"pre-wrap",margin:0,maxHeight:"40vh",overflow:"auto",background:"#1b1b1b",padding:"8px",borderRadius:"8px"}); pre.id="sai-diag-log"; box.appendChild(pre);
+  var row=el("div",{marginTop:"6px",display:"flex",gap:"6px",flexWrap:"wrap"});
+  function btn(txt,fn){var b=el("button",{background:"#2b2b2b",color:"#fff",border:"1px solid #3a3a3a",borderRadius:"999px",padding:"6px 10px",cursor:"pointer"}); b.textContent=txt; b.onclick=fn; return b;}
+  row.appendChild(btn("Copy",function(){navigator.clipboard&&navigator.clipboard.writeText(pre.textContent);}));
+  row.appendChild(btn("Clear",function(){pre.textContent="";}));
+  row.appendChild(btn("Close",function(){box.style.display="none";}));
+  row.appendChild(btn("Analyze",function(){try{window.analyze&&window.analyze();}catch(e){logErr("manual analyze: "+e.stack);} }));
+  box.appendChild(row); document.body.appendChild(box);
+  function show(){box.style.display="block";}
+  function log(msg){pre.textContent += (new Date().toISOString()+"  "+msg+"\n"); show();}
+  function logErr(msg){log("❌ "+msg);} window.__sai_log=log; window.__sai_logErr=logErr;
+  window.addEventListener("error", function(e){ logErr((e.message||"error")+" @"+(e.filename||"?")+":"+(e.lineno||0)); });
+  window.addEventListener("unhandledrejection", function(e){ var m=(e.reason&&e.reason.stack)||e.reason||"unhandled rejection"; logErr(String(m)); });
+  // Toggle pane with Shift+S (handy on BT keyboard)
+  window.addEventListener("keydown", function(ev){ if(ev.shiftKey && (ev.key||"").toLowerCase()==="s"){ box.style.display = (box.style.display==="none"?"block":"none"); }});
+})();</script>
+<script id="sai-autobind">(function(){
+  function $(q,s){return (s||document).querySelector(q);} function $all(q,s){return Array.from((s||document).querySelectorAll(q));}
+  function bindButtons(){
+    // Find Analyze button within the Core Inputs card (by text or data attr or onclick)
+    var btn = document.getElementById("btnAnalyze");
+    if(!btn){
+      btn = $all("article#tool button").find(function(b){
+        var t=(b.textContent||"").trim().toLowerCase();
+        return t==="analyze" || (b.getAttribute("onclick")||"").includes("analyze");
+      });
+      if(btn) btn.id = "btnAnalyze";
+    }
+    if(btn && !btn.__saiBound){ btn.__saiBound=true; btn.addEventListener("click", function(){ try { window.analyze && window.analyze(); } catch(e){ window.__sai_logErr && window.__sai_logErr("analyze click: "+e.stack); } }); }
+    // Clear button
+    var clr = document.getElementById("btnClear");
+    if(!clr){
+      clr = $all("article#tool button").find(function(b){ return (b.textContent||"").trim().toLowerCase()==="clear"; });
+      if(clr) clr.id = "btnClear";
+    }
+    if(clr && !clr.__saiBound){ clr.__saiBound=true; clr.addEventListener("click", function(){ try { window.clearResults && window.clearResults(); } catch(e){ window.__sai_logErr && window.__sai_logErr("clear click: "+e.stack); } }); }
+  }
+  function smoke(){ if(typeof analyze!=='function'){ setTimeout(smoke,300); return; } try{ console.log('analyze() ready'); }catch(_){ } } try{ console.log('analyze() ready'); }catch(_){ } } try{ console.log('analyze() ready'); }catch(_){ /* no-op */ }}
+    try { window.__sai_log && window.__sai_log("analyze() ready"); }
+    catch(e){ window.__sai_logErr && window.__sai_logErr("analyze() threw: "+e.stack); }
+  }
+  document.addEventListener("DOMContentLoaded", function(){ try{ bindButtons(); smoke(); }catch(e){ window.__sai_logErr && window.__sai_logErr("autobind: "+e.stack); } });
+  // In case Stellar moves DOM after load:
+  window.addEventListener("load", function(){ setTimeout(function(){ try{ bindButtons(); }catch(e){ window.__sai_logErr && window.__sai_logErr("late bind: "+e.stack); } }, 200); });
+})();</script>
+    <script src="assets/js/sai-engine.js"></script>
+<!-- Injected StrabismusAI Engine -->
+<script id="sai-selftest">(function(){
+  function log(m){ try{ console.log(m); }catch(_){} }
+  var tries=0, t=setInterval(function(){
+    tries++;
+    if (typeof analyze==="function"){
+      log(new Date().toISOString()+"  ✅ analyze() callable — silent run ok");
+      clearInterval(t);
+    } else {
+      log(new Date().toISOString()+"  analyze() not found yet; will retry");
+      if(tries>40){ log(new Date().toISOString()+"  ❌ analyze() still missing after 40 tries"); clearInterval(t); }
+    }
+  }, 300);
+})();</script>
+  <script id="sai-open-default">(function(){if(!location.hash) location.hash='#tool-stellar';})();</script>
+<style id="sai-req-style">.sai-req{outline:2px solid #d43f57;outline-offset:2px;border-radius:8px;}</style>
+
+
+<!-- SAI hard-guard (manual only) -->
+<script id="sai-hard-guard">(function(){
+  if(window.__saiHardGuard) return; window.__saiHardGuard = true;
+
+  // 1) Suppress any alert popups from legacy code
+  (function(){
+    try{
+      var orig = window.alert || function(){};
+      window.__sai_allow_alert = false;
+      window.alert = function(msg){ if(window.__sai_allow_alert) return orig.call(window, msg); /* suppressed */ };
+    }catch(_){}
+  })();
+
+  // 2) Only allow analyze() AFTER the user taps the real Analyze button
+  //    and ignore any analyze({silent:true}) calls.
+  var manualOK = false;
+
+  function markManualOK(){
+    manualOK = true;
+    // allow one run then reset (so background code can't keep firing)
+    setTimeout(function(){ manualOK = false; }, 100);
+  }
+
+  // Mark when the visible Analyze button is tapped
+  document.addEventListener('click', function(e){
+    try{
+      var b = e.target.closest('button');
+      if(!b) return;
+      var txt = (b.textContent||'').trim().toLowerCase();
+      var hasOnclick = (b.getAttribute('onclick')||'').toLowerCase().includes('analyze');
+      if (txt === 'analyze' || hasOnclick) markManualOK();
+    }catch(_){}
+  }, true);
+
+  // Wrap analyze when it appears
+  (function hook(){
+    if (typeof window.analyze === 'function' && !window.analyze.__saiGuarded){
+      var _an = window.analyze;
+      window.analyze = function(opts){
+        // Block silent calls and any auto call before a manual tap
+        if (opts && typeof opts === 'object' && opts.silent === true) return;
+        if (!manualOK) return;
+        return _an.apply(this, arguments);
+      };
+      window.analyze.__saiGuarded = true;
+    } else {
+      setTimeout(hook, 120);
+    }
+  })();
+
+})();</script>
+</body>
+</html>
